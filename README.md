@@ -10,6 +10,7 @@ create schema with mysql
 
 
 For frontend 
+cd frontend
 npm install 
 npm run dev
 
