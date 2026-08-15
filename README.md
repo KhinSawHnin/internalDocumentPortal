@@ -2,7 +2,7 @@
 
 #setup instruction
 
-For backend 
+For backend (need to have php 8.2 )
 cd backend
 composer install
 setup default password in env
