@@ -8,7 +8,7 @@ export default function ProtectedRoute() {
   const location = useLocation();
 
   if (!isAuthenticated) {
-    // Preserve intended destination so LoginPage can redirect back after login
+   
     return <Navigate to={ROUTES.LOGIN} state={{ from: location }} replace />;
   }
 

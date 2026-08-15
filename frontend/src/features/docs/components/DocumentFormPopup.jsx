@@ -8,7 +8,7 @@ import { useUploadDocumentMutation } from '../documentsApi';
 import toast from 'react-hot-toast';
 
 const ACCEPTED_TYPES = '.pdf,.doc,.docx,.txt';
-const MAX_SIZE_BYTES = 10 * 1024 * 1024; // 10MB — matches Laravel's max:10240 rule
+const MAX_SIZE_BYTES = 10 * 1024 * 1024;
 
 export default function DocumentFormPopup({ open, onClose }) {
   const {
@@ -21,8 +21,7 @@ export default function DocumentFormPopup({ open, onClose }) {
 
   const [uploadDocument, { isLoading }] = useUploadDocumentMutation();
 
-  // Upload is create-only (no edit mode), so just reset to blank
-  // every time the dialog opens.
+ 
   useEffect(() => {
     if (open) reset({ title: '', document: null });
   }, [open, reset]);

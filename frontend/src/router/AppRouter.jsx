@@ -13,12 +13,12 @@ export default function AppRouter() {
       <Routes>
         <Route path={ROUTES.LOGIN} element={<LoginPage />} />
 
-        {/* Any authenticated user */}
+    
         <Route element={<ProtectedRoute />}>
           <Route element={<AppLayout />}>
             <Route path={ROUTES.DOCUMENTS} element={<DocumentsPage />} />
 
-            {/* Admin-only nested inside the auth guard */}
+            
             <Route element={<AdminRoute />}>
               <Route path={ROUTES.USERS} element={<UsersPage />} />
             </Route>
